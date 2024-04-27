@@ -1,0 +1,104 @@
+h1 {
+  font-size: 30px;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  margin: 0 0 20px 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.foodsLink,
+.contactsLink,
+.cartLink,
+.settingsbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 5px 80px;
+}
+
+.contactsLink svg,
+.foodsLink svg,
+.cartLink svg,
+.settingsbtn svg {
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  padding: 20px 0;
+}
+
+.settingsbtn {
+  cursor: pointer;
+}
+.settingsbtn svg {
+  background-color: #272771;
+  border-radius: 50%;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+}
+
+.missionStatement {
+  font-size: 40px;
+  position: relative;
+  font-style: italic;
+  width: 700px;
+  padding: 20px;
+  color: #000;
+  margin: 100px 0 0 60px;
+  background-color: #306e746b;
+  border-radius: 30px;
+}
+
+.missionStatement p::before {
+  content: "\201C";
+  position: absolute;
+  top: -6.5rem;
+  left: -8.8rem;
+  line-height: 1;
+  font-size: 20rem;
+  padding-left: 20px;
+  font-family: inherit;
+  color: #000;
+  z-index: -1;
+}
+
+.missionStatement::first-letter {
+  float: left;
+  color: var(--color-primary-darker);
+  font-size: 3em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.contentContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.foodApp {
+  font-size: 28px;
+  list-style-type: none;
+}
+
+.liApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .cart {
+  font-size: 40px;
+}

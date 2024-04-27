@@ -1,0 +1,30 @@
+.outline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* .outlineMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  cursor: pointer;
+  font-size: 20px;
+} */
+.shopware {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.sidebar-btn {
+  margin-right: 20px;
+}

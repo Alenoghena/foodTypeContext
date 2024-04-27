@@ -1,0 +1,115 @@
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #072c18;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+  height: 800px;
+  width: 98vw;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background: #1422477c;
+  color: white;
+  border: #a5c1f6 solid 2px;
+  /* transform: translate(-50%, 0%); */
+}
+
+.title {
+  color: #042e35;
+  width: 100%;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1px;
+  text-align: center;
+  margin: 0 30%;
+  margin-top: 3%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #9abfc2; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.sidebarContainer {
+  grid-column: 1/2;
+}
+.outlineMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  column-gap: 10px;
+  margin: 40px 0;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.outlineMenu svg {
+  height: 50px;
+  width: 50px;
+}
+
+.main-content {
+  grid-column: 2/-1;
+}
+.main-content-full {
+  grid-column: 1/-1;
+}
+.sectionMain .foodTitle {
+  color: #012329;
+}
+
+.subTitle {
+  color: #012329;
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #012329;
+  /* padding-bottom: 20px; */
+}
+
+.sectionMain > h4 {
+  color: #444;
+}
+
+.liAppHeading {
+  padding-bottom: 10px;
+  color: #012329;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.footer {
+  text-align: center;
+  grid-column: 1/-1;
+  font-size: 30px;
+  background-color: #102118;
+}
