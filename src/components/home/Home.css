@@ -2,11 +2,8 @@ h1 {
   font-size: 30px;
 }
 .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: end;
-  margin: 0 0 20px 20px;
+  display: grid;
+  grid-template-columns: 950px 350px;
 }
 
 .links {
@@ -25,7 +22,7 @@ h1 {
   text-decoration: none;
   font-weight: 700;
   font-size: 3.5rem;
-  margin: 5px 80px;
+  margin: 5px 40px;
 }
 
 .contactsLink svg,
@@ -44,7 +41,6 @@ h1 {
 .settingsbtn svg {
   background-color: #272771;
   border-radius: 50%;
-  margin-left: 20px;
   cursor: pointer;
   padding: 0;
   height: 40px;
@@ -55,15 +51,21 @@ h1 {
   font-size: 40px;
   position: relative;
   font-style: italic;
-  width: 700px;
   padding: 20px;
   color: #000;
-  margin: 100px 0 0 60px;
+  margin: 100px 0 0 20px;
   background-color: #306e746b;
   border-radius: 30px;
 }
 
-.missionStatement p::before {
+.liAppHeading {
+  padding-bottom: 10px;
+  color: #012329;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* .missionStatement p::before {
   content: "\201C";
   position: absolute;
   top: -6.5rem;
@@ -74,7 +76,7 @@ h1 {
   font-family: inherit;
   color: #000;
   z-index: -1;
-}
+} */
 
 .missionStatement::first-letter {
   float: left;
@@ -85,20 +87,40 @@ h1 {
 
 .contentContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 600px 700px;
 }
 
 .foodApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 28px;
   list-style-type: none;
 }
 
-.liApp {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav .cart {
+/* .nav .cart {
   font-size: 40px;
+} */
+
+.outlineMenu,
+.outlineMenuClose {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  column-gap: 10px;
+  margin: 40px 0 40px 20px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.outlineMenu svg {
+  height: 40px;
+  width: 40px;
+}
+
+.outlineMenuClose svg {
+  height: 20px;
+  width: 20px;
 }

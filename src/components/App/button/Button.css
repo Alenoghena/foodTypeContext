@@ -4,9 +4,8 @@
   align-items: center;
 }
 .toggleButton {
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 6px 14px;
-  border-radius: 30px;
   border: none;
   color: #fff;
   padding: 20px 20px;

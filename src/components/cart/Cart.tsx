@@ -22,20 +22,21 @@ type CartProps = {
 const Cart = () => {
   const {
     cart,
-    handleIsClicked,
     customermobile,
     cartValue,
     isClicked,
     handleDelete,
   }: CartProps = useStateContext();
   const [itemId, setItemId] = useState<number | null>(null);
+
   const handleCartTrash = (id: number) => {
     cart.map((item: foodType) => {
       if (item.id === id) {
         if (itemId === null) {
+          //sets itemId to display delete icon
           setItemId(id);
         } else {
-          setItemId(null);
+          setItemId(null); //sets itemId to null to remove delete icon
         }
       }
     });
@@ -43,54 +44,77 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h2 className="heading">Your Cart List</h2>
+      {cart.length > 0 ? (
+        <div>
+          <h2 className="heading">Your Cart List</h2>
 
-      <ul className="cartList">
-        <li className="linkContainer">
-          <Link to="/foods">
-            <FaArrowLeft />
-          </Link>
-        </li>
-        {cart.map((item) => {
-          return (
-            <li key={item.id} data-id={item.id} className="selItem">
-              <h5 className="selFoodTitle">{item.name}</h5>
+          <ul className="cartList">
+            <li className="linkContainer">
+              <Link to="/foods">
+                <FaArrowLeft />
+              </Link>
+            </li>
+            {cart.map((item) => {
+              return (
+                <li key={item.id} data-id={item.id} className="selItem">
+                  <h5 className="selFoodTitle">{item.name}</h5>
 
-              <img
-                className="selFoodImg"
-                src={require(`../../images/${item.image}`)}
-                alt={item.name}
-                style={{ height: 200, width: 200, marginBottom: 20 }}
-                onClick={() => handleCartTrash(item.id)}
-              />
-              <p>
-                {item.quantity} {item.name}-{item.price}$ each-$
-                {item.totalAmount}
-              </p>
+                  <img
+                    className="selFoodImg"
+                    src={require(`../../images/${item.image}`)}
+                    alt={item.name}
+                    style={{ height: 200, width: 200, marginBottom: 20 }}
+                    onClick={() => handleCartTrash(item.id)}
+                  />
+                  <p>
+                    {item.quantity} {item.name}-{item.price}$ each-$
+                    {item.totalAmount}
+                  </p>
 
-              {itemId === item.id && (
+                  {itemId === item.id && (
+                    <FaTrashAlt
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Delete ${item.name}`}
+                      onClick={() => handleDelete(item.id)}
+                    />
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="ulMsg">
+            {/* <li className="trash">
+              {itemId && (
                 <FaTrashAlt
                   role="button"
                   tabIndex={0}
-                  aria-label={`Delete ${item.name}`}
-                  onClick={() => handleDelete(item.id)}
+                  aria-label={`Delete ${itemId}`}
+                  onClick={() => handleDelete(itemId)}
                 />
               )}
+            </li> */}
+            <li className="liMessage">
+              <label>
+                Order Submitted! You will receive an SMS,once ready, on your
+                mobile,
+                {customermobile}, for pickup.
+              </label>
+
+              <h3>
+                Total Bill is ${cartValue} for {cart.length} products
+              </h3>
             </li>
-          );
-        })}
-      </ul>
-
-      <li className="liMessage">
-        <label>
-          Order Submitted! You will receive an SMS on your mobile,
-          {customermobile}, once ready, for pickup.
-        </label>
-
-        <h3>
-          Total Bill is ${cartValue} for {cart.length} products
-        </h3>
-      </li>
+          </ul>
+        </div>
+      ) : (
+        <div className="empty">
+          <p>Cart is empty. Place your orders!</p>
+          <Link to="/foods">
+            <FaArrowLeft />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

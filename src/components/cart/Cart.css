@@ -3,29 +3,52 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 15px;
+  /* row-gap: 15px; */
   font-size: 1rem;
   list-style: none;
-  width: 100%;
+  /* width: 100%; */
 
   color: #eee;
 }
-
-.heading {
+.empty {
   font-size: 3rem;
 }
 
-.selItem {
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.selFoodTitle {
+  color: #710b1afd;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+/* .cartList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  position: relative;
+} */
+.cartList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  column-gap: 40px;
+}
+
+.selItem,
+.liMessage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .liMessage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: 25px;
 }
 
@@ -45,25 +68,29 @@
 }
 
 .linkContainer {
-  align-self: flex-start;
-  font-size: 40px;
-}
-
-.nav .cart {
-  font-size: 40px;
-}
-
-.cartList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-}
-
-.cartList > li {
   list-style: none;
   align-self: center;
-  column-gap: 16px;
+  position: absolute;
+  left: -150px;
+}
+
+.linkContainer svg {
+  height: 30px;
+  width: 120px;
+}
+
+.ulMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.trash svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  color: #093305;
+  cursor: pointer;
 }

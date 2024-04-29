@@ -1,7 +1,11 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaAddressCard, FaCartPlus, FaShoppingBasket } from "react-icons/fa";
+import {
+  FaAddressCard,
+  FaShoppingCart,
+  FaShoppingBasket,
+} from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import {
   useStateContext,
@@ -21,18 +25,8 @@ type NavButtonProps = {
 
 const NavButton = ({ customFunc, icon, color, dotColor }: NavButtonProps) => (
   <div>
-    <button
-      type="button"
-      onClick={() => customFunc()}
-      style={{ color }}
-      // className="relative text-xl rounded-full p-3 hover:bg-light-gray"
-    >
-      <span
-        style={{ background: dotColor }}
-        // className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-      >
-        {icon}
-      </span>
+    <button type="button" onClick={() => customFunc()} style={{ color }}>
+      <span style={{ background: dotColor }}>{icon}</span>
     </button>
   </div>
 );
@@ -63,6 +57,7 @@ const Home = () => {
           />
         </section>
       )}
+
       <section className="sectionHeader">
         <Header />
       </section>
@@ -96,20 +91,21 @@ const Home = () => {
 
       <nav className="nav">
         <section className="links">
-          <Link to="/foods" className="foodsLink">
-            <FaShoppingBasket />
-            <span>Products</span>
-          </Link>
+          {isClicked.pageSelected && (
+            <Link to="/foods" className="foodsLink">
+              <FaShoppingBasket />
+              <span>Products</span>
+            </Link>
+          )}
           <Link to="/contacts" className="contactsLink">
             <FaAddressCard />
             <span>Contacts</span>
           </Link>
-          {isClicked.orderSelected && (
-            <Link to="/cart" className="cartLink">
-              <FaCartPlus />
-              <span>Checkout</span>
-            </Link>
-          )}
+
+          <Link to="/cart" className="cartLink">
+            <FaShoppingCart />
+            <span>Checkout</span>
+          </Link>
         </section>
         <section className=" settingsbtn">
           <FiSettings />

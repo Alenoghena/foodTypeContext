@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./FoodOrder.css";
-import { FaCartPlus } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import {
   useStateContext,
   foodType,
@@ -121,7 +121,7 @@ const FoodOrder = () => {
         {isClicked.orderSelected && (
           <div className="shoppingCart">
             <Link to="/cart">
-              <FaCartPlus />
+              <FaShoppingCart />
             </Link>
           </div>
         )}
