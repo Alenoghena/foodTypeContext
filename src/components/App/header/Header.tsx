@@ -1,8 +1,8 @@
-import "./Header.css";
 import {
   initialStateType,
   useStateContext,
 } from "../../../contexts/ContextProvider";
+import "./Header.css";
 
 type HeaderProps = {
   isClicked: initialStateType;

@@ -53,7 +53,6 @@ const FoodOrder = () => {
                 className="selFoodImg"
                 src={require(`../../images/${selectedFood.image}`)}
                 alt={selectedFood.name}
-                style={{ height: 300, width: 300 }}
               />
               <p className="selQuantity">
                 Available Quantity: {selectedFood.quantity}
@@ -66,7 +65,7 @@ const FoodOrder = () => {
         {isClicked.componentSelected && (
           <ul className="ulFoodDetails">
             <li className="selQuantity">
-              <label>Quantity</label>
+              <label>Quantity:</label>
               <input
                 type="number"
                 value={quantity}

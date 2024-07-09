@@ -18,7 +18,6 @@ const Sidebar = () => {
       <MdOutlineCancel
         role="button"
         onClick={() => handleIsClicked("sidebarSelected")}
-        style={{ color: "#eee", height: 30, width: 30 }}
         className="btnClose"
       />
     </div>

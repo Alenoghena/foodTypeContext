@@ -4,12 +4,11 @@
   align-items: center;
 }
 .toggleButton {
-  font-size: 1.5rem;
-  padding: 6px 14px;
+  font-size: 10px;
+  padding: 1px 2px;
   border: none;
   color: #fff;
-  padding: 20px 20px;
   background-color: #05424c;
-  /* margin-top: 200px; */
+  margin-right: 3px;
   cursor: pointer;
 }

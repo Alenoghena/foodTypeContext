@@ -31,7 +31,7 @@ const Button = () => {
           !isClicked.show &&
           !isClicked.cartSelected ? (
           <button className="toggleButton" onClick={() => handleChoosePage()}>
-            Availability check
+            check
           </button>
         ) : (
           <button className="toggleButton" onClick={() => handleChoosePage()}>

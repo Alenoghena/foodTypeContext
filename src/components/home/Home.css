@@ -1,9 +1,9 @@
 h1 {
-  font-size: 30px;
+  font-size: 20px;
 }
 .nav {
   display: grid;
-  grid-template-columns: 950px 350px;
+  grid-template-columns: 450px 350px;
 }
 
 .links {
@@ -21,47 +21,51 @@ h1 {
   align-items: center;
   text-decoration: none;
   font-weight: 700;
-  font-size: 3.5rem;
-  margin: 5px 40px;
+  font-size: 1rem;
+  margin: 5px 10px;
 }
 
 .contactsLink svg,
 .foodsLink svg,
 .cartLink svg,
 .settingsbtn svg {
-  margin-right: 20px;
-  height: 60px;
-  width: 60px;
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
   padding: 20px 0;
+  cursor: pointer;
 }
 
 .settingsbtn {
-  cursor: pointer;
+  color: darkgrey;
 }
 .settingsbtn svg {
   background-color: #272771;
   border-radius: 50%;
-  cursor: pointer;
   padding: 0;
-  height: 40px;
-  width: 40px;
 }
 
 .missionStatement {
-  font-size: 40px;
+  font-size: 100%;
   position: relative;
   font-style: italic;
-  padding: 20px;
+  padding: 5px;
   color: #000;
   margin: 100px 0 0 20px;
   background-color: #306e746b;
   border-radius: 30px;
+  grid-column: 1/2;
 }
 
 .liAppHeading {
   padding-bottom: 10px;
-  color: #012329;
-  font-size: 30px;
+  color: #0c0505;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.liApp {
+  color: #1207a9;
   font-weight: 700;
 }
 
@@ -81,13 +85,13 @@ h1 {
 .missionStatement::first-letter {
   float: left;
   color: var(--color-primary-darker);
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .contentContainer {
   display: grid;
-  grid-template-columns: 600px 700px;
+  grid-template-columns: 30% 10% 50%;
 }
 
 .foodApp {
@@ -95,8 +99,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 28px;
+  font-size: 12px;
   list-style-type: none;
+  grid-column: 3/4;
 }
 
 /* .nav .cart {
@@ -110,17 +115,165 @@ h1 {
   justify-content: left;
   align-items: start;
   column-gap: 10px;
-  margin: 40px 0 40px 20px;
+  margin: 40px 0 40px 10px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .outlineMenu svg {
-  height: 40px;
-  width: 40px;
+  height: 90%;
+  width: 90%;
 }
 
 .outlineMenuClose svg {
-  height: 20px;
-  width: 20px;
+  height: 20%;
+  width: 40%;
+}
+
+/*TABLETS*/
+
+@media screen and (max-width: 768px) {
+  .contentContainer {
+    display: grid;
+    grid-template-columns: 40% 10% 45%;
+  }
+  .foodApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 140%;
+    list-style-type: none;
+    grid-column: 3/4;
+  }
+  .missionStatement {
+    font-size: 140%;
+    position: relative;
+    font-style: italic;
+    font-weight: 600;
+    justify-self: center;
+    align-self: center;
+    color: #000;
+    margin: 100px 0 0 20px;
+    background-color: #306e746b;
+    border-radius: 30px;
+    grid-column: 1/2;
+  }
+  .missionStatement::first-letter {
+    float: left;
+    color: var(--color-primary-darker);
+    font-size: 230%;
+    font-weight: 700;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .missionStatement h3 {
+    font-size: 100%;
+  }
+  .liAppHeading {
+    padding-bottom: 10px;
+    color: #0c0505;
+    font-size: 110%;
+    font-weight: 700;
+  }
+  .outlineMenu svg {
+    font-size: 30px;
+  }
+  .outlineMenuClose svg {
+    font-size: 20px;
+  }
+
+  .settingsbtn svg {
+    background-color: #272771;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+  }
+
+  .cartLink svg,
+  .contactsLink svg,
+  .foodsLink svg {
+    cursor: pointer;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+  }
+  .settingsbtn {
+    font-size: 24px;
+  }
+}
+
+/*Mobiles*/
+
+@media screen and (max-width: 480px) {
+  .contentContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .foodApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 160%;
+    list-style-type: none;
+    grid-column: 1/-1;
+  }
+  .missionStatement {
+    font-size: 190%;
+    position: relative;
+    font-style: italic;
+    font-weight: 600;
+    color: #000;
+    margin: 100px 0 0 20px;
+    background-color: #306e746b;
+    border-radius: 30px;
+    grid-column: 1/-1;
+  }
+  .missionStatement::first-letter {
+    float: left;
+    color: var(--color-primary-darker);
+    font-size: 300%;
+    font-weight: 700;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .missionStatement h3 {
+    font-size: 140%;
+  }
+  .liAppHeading {
+    padding-bottom: 10px;
+    color: #0c0505;
+    font-size: 150%;
+    font-weight: 700;
+  }
+  .outlineMenu svg {
+    font-size: 40px;
+  }
+
+  .outlineMenuClose svg {
+    font-size: 40px;
+  }
+  .settingsbtn svg {
+    background-color: #272771;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+  }
+
+  .foodsLink span {
+    font-size: 150%;
+  }
+  .contactsLink span {
+    font-size: 150%;
+  }
+  .cartLink span {
+    font-size: 150%;
+  }
+  .settingsbtn span {
+    font-size: 150%;
+    color: #2e19ca;
+  }
 }

@@ -59,7 +59,6 @@ const Foods = () => {
                   className="foodImg"
                   src={require(`../../images/${item.image}`)}
                   alt={item.name}
-                  style={{ height: 150, width: 150 }}
                 />
 
                 <div className="foodItem">

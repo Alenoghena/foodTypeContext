@@ -16,6 +16,7 @@ type CartProps = {
   customermobile: number;
   isClicked: initialStateType;
   cartValue: number;
+  display: boolean;
   handleDelete: (id: number) => void;
 };
 
@@ -25,6 +26,7 @@ const Cart = () => {
     customermobile,
     cartValue,
     isClicked,
+    display,
     handleDelete,
   }: CartProps = useStateContext();
   const [itemId, setItemId] = useState<number | null>(null);
@@ -41,19 +43,19 @@ const Cart = () => {
       }
     });
   };
+  console.log(display, cart.length);
 
   return (
     <div className="cart">
-      {cart.length > 0 ? (
+      {display && (
         <div>
           <h2 className="heading">Your Cart List</h2>
-
+          <div className="liMessage">
+            <Link to="/foods">
+              <FaArrowLeft />
+            </Link>
+          </div>
           <ul className="cartList">
-            <li className="linkContainer">
-              <Link to="/foods">
-                <FaArrowLeft />
-              </Link>
-            </li>
             {cart.map((item) => {
               return (
                 <li key={item.id} data-id={item.id} className="selItem">
@@ -63,7 +65,6 @@ const Cart = () => {
                     className="selFoodImg"
                     src={require(`../../images/${item.image}`)}
                     alt={item.name}
-                    style={{ height: 200, width: 200, marginBottom: 20 }}
                     onClick={() => handleCartTrash(item.id)}
                   />
                   <p>
@@ -107,7 +108,8 @@ const Cart = () => {
             </li>
           </ul>
         </div>
-      ) : (
+      )}
+      {!display && (
         <div className="empty">
           <p>Cart is empty. Place your orders!</p>
           <Link to="/foods">

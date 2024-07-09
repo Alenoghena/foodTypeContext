@@ -30,6 +30,7 @@ export type foodArrType = foodType[];
 
 type useContextType = {
   name: string | null;
+  display: boolean;
   menuItems: foodArrType;
   selectedFood: foodType;
   cart: foodArrType;
@@ -82,6 +83,7 @@ const initialState = {
   pageSelected: false,
   cartSelected: false,
   orderSelected: false,
+
   return: false,
 };
 
@@ -189,12 +191,13 @@ const foodArr = [
 ];
 
 export const ContextProvider = ({ children }: ContextProviderProps) => {
-  const unitPrice = () => {
-    return selectedFood.price;
-  };
+  // const unitPrice = () => {
+  //   return selectedFood.price;
+  // };
 
   const getLocalStorage = () => {
     const cartList = localStorage.getItem("cart");
+
     if (cartList) {
       return JSON.parse(cartList);
     }
@@ -206,7 +209,8 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
   const [cart, setCart] = useState<foodArrType>([] as foodArrType);
   const [selectedFood, setSelectedFood] = useState<foodType>({} as foodType);
   const [quantity, setQuantity] = useState(1);
-  const [totalAmount, setTotalAmount] = useState(unitPrice());
+  const [totalAmount, setTotalAmount] = useState("");
+  const [display, setDisplay] = useState(false);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState(0);
   const [fullName, setFullName] = useState({
@@ -253,6 +257,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
             });
             setErrorMessage(false);
             setCart([...cartList]);
+            // cart.length === 0 ? setDisplay(false) : setDisplay(true);
           }
           if (!isCartSame) {
             cartList = [
@@ -267,6 +272,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
             ];
             setErrorMessage(false);
             setCart([...cart, ...cartList]);
+            // cart.length === 0 ? setDisplay(false) : setDisplay(true);
           }
 
           handleIsClicked("orderSelected");
@@ -276,12 +282,16 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
             quantity: item.quantity - Number(orderQuantity),
           };
           setSelectedFood(menuSelected);
+          //return the updated item here and save to updatedMenuItems
           return menuSelected;
         } else {
+          //return items not updated here and save to updatedMenuItems
           return item;
         }
       });
+
       setMenuItems(updatedMenuItems);
+      cart.length === 0 ? setDisplay(false) : setDisplay(true);
     } catch {
       setErrorMessage(true);
     }
@@ -305,7 +315,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       return item.id === parseInt(event.currentTarget.dataset.id);
     });
     if (foodList) {
-      setTotalAmount(String(Number(foodList.price) * 1));
+      setTotalAmount(String(Number(foodList.price)));
       setSelectedFood(foodList);
 
       handleIsClicked("componentSelected");
@@ -319,6 +329,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       })
       .reduce((sum, amount) => sum + amount, 0);
     localStorage.setItem("cart", JSON.stringify(value));
+    cart.length === 0 ? setDisplay(false) : setDisplay(true);
     setCartValue(value);
   }, [cart]);
 
@@ -345,16 +356,19 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
           }
         });
         setCart([...cartList]);
+        // cart.length === 0 ? setDisplay(false) : setDisplay(true);
         return {
-          ...item, //we are spreading the item, an object, here
+          ...item, //we are spreading the item, an object, here, so we can update the quantity
           quantity: item.quantity + 1,
         };
       }
 
       if (isCartSame && cart[index].quantity - 1 === 0 && item.id === id) {
+        //filter and keep item.id not equal to selected id
         cartList = cart.filter((item: foodType) => item.id !== id);
 
         setCart([...cartList]);
+        // cart.length === 0 ? setDisplay(false) : setDisplay(true);
         return {
           ...item, //we are spreading the item, an object, here
           quantity: item.quantity + 1,
@@ -506,6 +520,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
         handleDelete,
         customerName,
         errorMessage,
+        display,
       }}
     >
       {children}

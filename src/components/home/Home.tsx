@@ -58,37 +58,38 @@ const Home = () => {
         </section>
       )}
 
-      <section className="sectionHeader">
-        <Header />
-      </section>
+      <div>
+        <section className="sectionHeader">
+          <Header />
+        </section>
 
-      <section className="sectionList">
-        <div className="contentContainer">
-          <div className="missionStatement">
-            <h3>Mission Statement</h3>
-            <p>
-              Our products are organic, carefully cultivated and processed with
-              the best physical and traditional methods to ensure no or minimum
-              loss of minerals and vitamins.
-            </p>
+        <section className="sectionList">
+          <div className="contentContainer">
+            <div className="missionStatement">
+              <h3>Mission Statement</h3>
+              <p>
+                Our products are organic, carefully cultivated and processed
+                with the best physical and traditional methods to ensure no or
+                minimum loss of minerals and vitamins.
+              </p>
+            </div>
+
+            <ul className="foodApp">
+              <li className="liAppHeading">
+                Item Name - Item Quantity Available
+              </li>
+              ,
+              {menuItems.map((item) => {
+                return (
+                  <li key={item.id} className="liApp">
+                    {item.name} - {item.quantity}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-
-          <ul className="foodApp">
-            <li className="liAppHeading">
-              Item Name - Item Quantity Available
-            </li>
-            ,
-            {menuItems.map((item) => {
-              return (
-                <li key={item.id} className="liApp">
-                  {item.name} - {item.quantity}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <nav className="nav">
         <section className="links">
           {isClicked.pageSelected && (

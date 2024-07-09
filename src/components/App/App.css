@@ -11,39 +11,31 @@
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
-
-html {
-  font-size: 62.5%;
+/* * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
+} */
+/* html {
+  font-size: 100%;
+} */
 
 body {
   font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #444;
-  /* height: 800px; */
-  width: 100vw;
-  /* padding: 1rem; */
-  overflow-y: scroll;
+  /* background-color: #39b385; */
+
+  /* overflow-y: scroll; */
 }
 
 .App {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 8% 92%;
   background: #1422477c;
   color: white;
   border: #a5c1f6 solid 2px;
   /* transform: translate(-50%, 0%); */
-}
-
-.title {
-  color: #042e35;
-  width: 100%;
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1px;
-  text-align: center;
-  margin: 0 30%;
-  margin-top: 3%;
+  background-image: url(../../img/mediumField.jpg);
 }
 
 .sidebar {
@@ -62,15 +54,9 @@ body {
 .main-content-full {
   grid-column: 1/-1;
 }
+
 .sectionMain .foodTitle {
   color: #012329;
-}
-
-.subTitle {
-  color: #012329;
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 0px;
 }
 
 h4 {
@@ -86,6 +72,81 @@ h4 {
 .footer {
   text-align: center;
   grid-column: 1/-1;
-  font-size: 30px;
+  /* width: 900px; */
+  font-size: 10px;
   background-color: #102118;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*TABLETS*/
+
+@media screen and (max-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #1422477c;
+    color: white;
+    border: #a5c1f6 solid 2px;
+    /* width: 800px; */
+    /* padding-right: 100px; */
+    /* transform: translate(-50%, 0%); */
+    background-image: url(../../img/mediumField.jpg);
+  }
+  .footer {
+    text-align: center;
+    grid-column: 1/-1;
+    font-size: 20px;
+    background-color: #102118;
+  }
+  .main-content {
+    grid-column: 2/-1;
+  }
+  .main-content-full {
+    grid-column: 1/-1;
+  }
+}
+
+/*Mobiles*/
+
+@media screen and (max-width: 480px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #1422477c;
+    color: white;
+    border: #a5c1f6 solid 2px;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1%; */
+    /* width: 500px; */
+    /* padding-right: 100px; */
+    /* transform: translate(-50%, 0%); */
+    background-image: url(../../img/mediumField.jpg);
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/-1;
+  }
+  .main-content-full {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/-1;
+  }
+  .footer {
+    /* text-align: center; */
+    grid-column: 1/-1;
+    font-size: 20px;
+    background-color: #102118;
+  }
 }
