@@ -43,7 +43,7 @@ const Cart = () => {
       }
     });
   };
-  console.log(display, cart.length);
+  // console.log(display, cart.length);
 
   return (
     <div className="cart">

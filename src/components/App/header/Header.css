@@ -1,9 +1,25 @@
-.headerContainer {
+.header {
   display: flex;
   flex-direction: column;
-  justify-content: first baseline;
+  justify-content: center;
   align-items: center;
-  width: 900px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5rem;
+  width: 100%;
+  padding: 0 3rem;
+  z-index: 100;
+}
+.nav {
+  display: grid;
+  grid-template-columns: 450px 350px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
 .title {
@@ -22,6 +38,45 @@
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 0px;
+}
+.foodsLink,
+.contactsLink,
+.cartLink,
+.settingsbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.6rem;
+  margin: 5px 10px;
+}
+
+.contactsLink svg,
+.foodsLink svg,
+.cartLink svg,
+.settingsbtn svg {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.settingsbtn {
+  color: darkgrey;
+}
+.settingsbtn svg {
+  background-color: #272771;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.outlineMenu {
+  color: red;
+  font-size: 10px;
 }
 
 @media screen and (max-width: 768px) {

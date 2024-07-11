@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Error from "./error/Error";
 import Footer from "./Footer";
-// import Cart from "../cart/Cart";
+import Home from "../home/Home";
 import "./App.css";
 import Contacts from "./contacts/Contacts";
 import Sidebar from "./sidebar/Sidebar";
@@ -10,12 +10,15 @@ import {
   useStateContext,
   initialStateType,
 } from "../../contexts/ContextProvider";
+
 //Lazy Loading
 const Foods = lazy(() => import("../foods/Foods"));
-const Home = lazy(() => import("../home/Home"));
+
 const Cart = lazy(() => import("../cart/Cart"));
+
 type AppProps = {
   isClicked: initialStateType;
+  handleIsClicked: (clicked: string) => void;
 };
 
 const App = () => {
@@ -37,23 +40,17 @@ const App = () => {
         <section className="routes">
           <Routes>
             {/* dashboard  */}
-            <Route
-              path="/"
-              element={
-                <Suspense fallback={<div> Home details loading......</div>}>
-                  <Home />
-                </Suspense>
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route
               path="/foods"
               element={
-                <Suspense fallback={<div> Foods details loading......</div>}>
+                <Suspense fallback={<div>Food detail loading...</div>}>
                   <Foods />
                 </Suspense>
               }
             />
             <Route path="/contacts" element={<Contacts />} />
+
             <Route
               path="/cart"
               element={
@@ -66,6 +63,7 @@ const App = () => {
           </Routes>
         </section>
       </div>
+
       <div className="footer">
         <Footer />
       </div>

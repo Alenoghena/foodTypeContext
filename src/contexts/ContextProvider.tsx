@@ -210,7 +210,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
   const [selectedFood, setSelectedFood] = useState<foodType>({} as foodType);
   const [quantity, setQuantity] = useState(1);
   const [totalAmount, setTotalAmount] = useState("");
-  const [display, setDisplay] = useState(false);
+  const [display, setDisplay] = useState(cart.length > 0);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState(0);
   const [fullName, setFullName] = useState({
@@ -257,7 +257,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
             });
             setErrorMessage(false);
             setCart([...cartList]);
-            // cart.length === 0 ? setDisplay(false) : setDisplay(true);
           }
           if (!isCartSame) {
             cartList = [
@@ -272,7 +271,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
             ];
             setErrorMessage(false);
             setCart([...cart, ...cartList]);
-            // cart.length === 0 ? setDisplay(false) : setDisplay(true);
           }
 
           handleIsClicked("orderSelected");
@@ -329,7 +327,11 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       })
       .reduce((sum, amount) => sum + amount, 0);
     localStorage.setItem("cart", JSON.stringify(value));
-    cart.length === 0 ? setDisplay(false) : setDisplay(true);
+    if (cart.length > 0) {
+      setDisplay(true);
+    } else {
+      setDisplay(false);
+    }
     setCartValue(value);
   }, [cart]);
 
@@ -356,7 +358,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
           }
         });
         setCart([...cartList]);
-        // cart.length === 0 ? setDisplay(false) : setDisplay(true);
         return {
           ...item, //we are spreading the item, an object, here, so we can update the quantity
           quantity: item.quantity + 1,
@@ -368,7 +369,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
         cartList = cart.filter((item: foodType) => item.id !== id);
 
         setCart([...cartList]);
-        // cart.length === 0 ? setDisplay(false) : setDisplay(true);
+
         return {
           ...item, //we are spreading the item, an object, here
           quantity: item.quantity + 1,

@@ -1,49 +1,6 @@
 h1 {
   font-size: 20px;
 }
-.nav {
-  display: grid;
-  grid-template-columns: 450px 350px;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-}
-
-.foodsLink,
-.contactsLink,
-.cartLink,
-.settingsbtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  margin: 5px 10px;
-}
-
-.contactsLink svg,
-.foodsLink svg,
-.cartLink svg,
-.settingsbtn svg {
-  margin-right: 10px;
-  height: 15px;
-  width: 15px;
-  padding: 20px 0;
-  cursor: pointer;
-}
-
-.settingsbtn {
-  color: darkgrey;
-}
-.settingsbtn svg {
-  background-color: #272771;
-  border-radius: 50%;
-  padding: 0;
-}
 
 .missionStatement {
   font-size: 100%;
@@ -51,7 +8,7 @@ h1 {
   font-style: italic;
   padding: 5px;
   color: #000;
-  margin: 100px 0 0 20px;
+  margin: 10px 0 0 20px;
   background-color: #306e746b;
   border-radius: 30px;
   grid-column: 1/2;
@@ -68,19 +25,6 @@ h1 {
   color: #1207a9;
   font-weight: 700;
 }
-
-/* .missionStatement p::before {
-  content: "\201C";
-  position: absolute;
-  top: -6.5rem;
-  left: -8.8rem;
-  line-height: 1;
-  font-size: 20rem;
-  padding-left: 20px;
-  font-family: inherit;
-  color: #000;
-  z-index: -1;
-} */
 
 .missionStatement::first-letter {
   float: left;
@@ -104,31 +48,9 @@ h1 {
   grid-column: 3/4;
 }
 
-/* .nav .cart {
-  font-size: 40px;
+/* .sectionHeader {
+  grid-column: 1/-1;
 } */
-
-.outlineMenu,
-.outlineMenuClose {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: start;
-  column-gap: 10px;
-  margin: 40px 0 40px 10px;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.outlineMenu svg {
-  height: 90%;
-  width: 90%;
-}
-
-.outlineMenuClose svg {
-  height: 20%;
-  width: 40%;
-}
 
 /*TABLETS*/
 

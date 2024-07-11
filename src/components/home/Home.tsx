@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-import {
-  FaAddressCard,
-  FaShoppingCart,
-  FaShoppingBasket,
-} from "react-icons/fa";
-import { FiSettings } from "react-icons/fi";
+// import { ReactNode } from "react";
+// import { Link } from "react-router-dom";
+// import { AiOutlineMenu } from "react-icons/ai";
+// import {
+//   FaAddressCard,
+//   FaShoppingCart,
+//   FaShoppingBasket,
+// } from "react-icons/fa";
+// import { FiSettings } from "react-icons/fi";
 import {
   useStateContext,
   foodArrType,
@@ -15,21 +15,21 @@ import {
 import Header from "../App/header/Header";
 import "./Home.css";
 
-type NavButtonProps = {
-  title?: string;
-  customFunc: () => void;
-  icon: ReactNode;
-  color?: string;
-  dotColor?: string;
-};
+// type NavButtonProps = {
+//   title?: string;
+//   customFunc: () => void;
+//   icon: ReactNode;
+//   color?: string;
+//   dotColor?: string;
+// };
 
-const NavButton = ({ customFunc, icon, color, dotColor }: NavButtonProps) => (
-  <div>
-    <button type="button" onClick={() => customFunc()} style={{ color }}>
-      <span style={{ background: dotColor }}>{icon}</span>
-    </button>
-  </div>
-);
+// const NavButton = ({ customFunc, icon, color, dotColor }: NavButtonProps) => (
+//   <div>
+//     <button type="button" onClick={() => customFunc()} style={{ color }}>
+//       <span style={{ background: dotColor }}>{icon}</span>
+//     </button>
+//   </div>
+// );
 
 type HomeProps = {
   menuItems: foodArrType;
@@ -41,13 +41,16 @@ const Home = () => {
   const { menuItems, isClicked, handleIsClicked }: HomeProps =
     useStateContext();
 
-  const handleActiveMenu = () => {
-    handleIsClicked("sidebarSelected");
-  };
+  // const handleActiveMenu = () => {
+  //   handleIsClicked("sidebarSelected");
+  // };
 
   return (
     <div className="home">
-      {!isClicked.sidebarSelected && (
+      <section className="sectionHeader">
+        <Header />
+      </section>
+      {/* {!isClicked.sidebarSelected && (
         <section className=" outlineMenu">
           <NavButton
             title="Menu"
@@ -56,13 +59,9 @@ const Home = () => {
             icon={<AiOutlineMenu />}
           />
         </section>
-      )}
+      )} */}
 
       <div>
-        <section className="sectionHeader">
-          <Header />
-        </section>
-
         <section className="sectionList">
           <div className="contentContainer">
             <div className="missionStatement">
@@ -90,31 +89,34 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <nav className="nav">
-        <section className="links">
-          {isClicked.pageSelected && (
-            <Link to="/foods" className="foodsLink">
-              <FaShoppingBasket />
-              <span>Products</span>
-            </Link>
-          )}
-          <Link to="/contacts" className="contactsLink">
-            <FaAddressCard />
-            <span>Contacts</span>
-          </Link>
-
-          <Link to="/cart" className="cartLink">
-            <FaShoppingCart />
-            <span>Checkout</span>
-          </Link>
-        </section>
-        <section className=" settingsbtn">
-          <FiSettings />
-          <span>Settings</span>
-        </section>
-      </nav>
     </div>
   );
 };
 
 export default Home;
+
+{
+  /* <nav className="nav">
+<section className="links">
+  {isClicked.pageSelected && (
+    <Link to="/foods" className="foodsLink">
+      {/* <FaShoppingBasket />
+      <span>Products</span>
+    </Link>
+  )}
+  <Link to="/contacts" className="contactsLink">
+    <FaAddressCard />
+    <span>Contacts</span>
+  </Link>
+
+  <Link to="/cart" className="cartLink">
+    <FaShoppingCart />
+    <span>Checkout</span>
+  </Link>
+</section>
+<section className=" settingsbtn">
+  <FiSettings />
+  <span>Settings</span>
+</section>
+</nav> */
+}

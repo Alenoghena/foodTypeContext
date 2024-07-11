@@ -1,4 +1,4 @@
-.foods {
+.foods__form {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.foods > h2 {
+.foods__form h2 {
   font-size: 1.5rem;
   color: #19195b;
 }
@@ -18,10 +18,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  gap: 20px;
+  gap: 10px;
   list-style-type: none;
   padding: 20px 0;
-  margin: 0 20px;
+  margin: 0 5px;
   height: 75%;
   background-color: #aaaaa817;
 }

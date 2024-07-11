@@ -28,19 +28,21 @@ const Foods = () => {
 
   return (
     <div className="foods">
-      {!isClicked.componentSelected && <h2>Choose from our List of Items</h2>}
       {!isClicked.componentSelected && (
-        <form className="search">
-          <label>Search:</label>
-          &nbsp;
-          <input
-            type="search"
-            value={searchTerm}
-            placeholder="Search for item"
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <FaSearch />
-        </form>
+        <div className="foods__form">
+          <h2>Choose from our List of Items</h2>
+          <form className="search">
+            <label>Search:</label>
+            &nbsp;
+            <input
+              type="search"
+              value={searchTerm}
+              placeholder="Search for item"
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <FaSearch />
+          </form>
+        </div>
       )}
       <ul className="ulFoods">
         {!isClicked.componentSelected &&
