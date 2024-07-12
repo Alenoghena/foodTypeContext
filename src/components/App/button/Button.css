@@ -12,3 +12,9 @@
   margin-right: 3px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+  .toggleButton {
+    font-size: 20px;
+  }
+}

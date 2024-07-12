@@ -10,10 +10,6 @@
 
   color: #eee;
 }
-.empty {
-  font-size: 1.5rem;
-  color: #000;
-}
 
 .heading {
   text-align: center;
@@ -27,14 +23,15 @@ h3 {
 .selFoodTitle {
   color: #710b1afd;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  margin: 20px 0;
 }
 
 .cartList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  column-gap: 15px;
+  column-gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -86,10 +83,20 @@ h3 {
   height: 140px;
   width: 140px;
   margin-bottom: 10px;
+  border-radius: 1rem;
 }
 .liMessage svg {
   font-size: 1.6rem;
   font-weight: 500;
+}
+.empty {
+  font-size: 2rem;
+  padding-bottom: 12.8rem;
+  margin-top: 4rem;
+  color: #000;
+}
+.liMessage h3 {
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   /* .cart {
@@ -104,79 +111,121 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     column-gap: 40px;
-    row-gap: 4px;
+    justify-content: center;
+    align-items: center;
   }
   .selFoodTitle {
     font-size: 1.5rem;
     font-weight: 500;
+    margin-bottom: 10px;
   }
-  .selFoodImg {
-    height: 240px;
-    width: 240px;
+  .selItem .selFoodImg {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
   }
   .heading {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #000;
     font-weight: 600;
   }
+  .selItem {
+    justify-self: center;
+  }
   .selItem p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: 220px;
     color: #000;
     font-weight: 500;
   }
-  .liMessage {
-    font-size: 1.5rem;
+  .liMessage label {
+    font-size: 1.2rem;
+    width: 800px;
     font-weight: 500;
+    margin-bottom: 20px;
   }
   .liMessage h3 {
-    font-size: 1.5rem;
+    margin-bottom: 200px;
+  }
+  h3 {
+    font-size: 1.4rem;
     font-weight: 500;
   }
-  .liMessage svg {
-    font-size: 3rem;
+  .foods__link svg {
+    font-size: 2rem;
     font-weight: 500;
+  }
+  .empty {
+    font-size: 3rem;
+    padding-bottom: 10rem;
+    margin-top: 4rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .cartList {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    column-gap: 40px;
-    row-gap: 4px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    row-gap: 50px;
+  }
+  .selItem {
+    justify-self: center;
   }
   .selFoodTitle {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
   }
-  .selFoodImg {
-    height: 360px;
-    width: 360px;
+  .selItem .selFoodImg {
+    height: 180px;
+    width: 180px;
   }
   .heading {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: #000;
     font-weight: 600;
   }
   .selItem p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 320px;
     color: #000;
     font-weight: 500;
   }
   .liMessage {
-    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .liMessage label {
+    font-size: 1.8rem;
     font-weight: 500;
+    margin-left: 10px;
   }
   .liMessage h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 50px;
   }
   .liMessage svg {
     font-size: 4rem;
     font-weight: 500;
     color: #200707;
+  }
+  .foods__link svg {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .selItem svg {
+    height: 6rem;
+    width: 1rem;
+    color: #dad8d8;
+  }
+  .empty {
+    font-size: 3rem;
+    padding-bottom: 30rem;
+    margin-top: 4rem;
   }
 }

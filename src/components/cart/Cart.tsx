@@ -50,7 +50,7 @@ const Cart = () => {
       {display && (
         <div>
           <h2 className="heading">Your Cart List</h2>
-          <div className="liMessage">
+          <div className="foods__link">
             <Link to="/foods">
               <FaArrowLeft />
             </Link>
@@ -111,10 +111,10 @@ const Cart = () => {
       )}
       {!display && (
         <div className="empty">
-          <p>Cart is empty. Place your orders!</p>
           <Link to="/foods">
             <FaArrowLeft />
           </Link>
+          <p>Cart is empty. Place your orders!</p>
         </div>
       )}
     </div>

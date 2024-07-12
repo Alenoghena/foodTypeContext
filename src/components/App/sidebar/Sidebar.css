@@ -22,3 +22,16 @@
   background-color: #06482f;
   box-shadow: none;
 }
+
+@media screen and (max-width: 480px) {
+  .sidebar-btn {
+    font-size: 50px;
+  }
+
+  .btnContainer .btnClose {
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 26px;
+    margin-top: 25px;
+  }
+}

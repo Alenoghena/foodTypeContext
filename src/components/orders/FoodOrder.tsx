@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./FoodOrder.css";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaLongArrowAltLeft } from "react-icons/fa";
 import {
   useStateContext,
   foodType,
@@ -45,6 +45,13 @@ const FoodOrder = () => {
     //Displays selected item
     <>
       <div className=" foodOrder">
+        {isClicked.componentSelected && (
+          <nav className="home">
+            <Link to="/">
+              <FaLongArrowAltLeft />
+            </Link>
+          </nav>
+        )}
         {isClicked.componentSelected && (
           <ul className="ulFoodDetails">
             <li className="orderedItem">
@@ -126,7 +133,7 @@ const FoodOrder = () => {
         )}
       </div>
       {isClicked.componentSelected && errorMessage && (
-        <div>
+        <div className="stock__msg">
           <h4>
             Quantity above stock. Please check available stock and enter the
             right value!

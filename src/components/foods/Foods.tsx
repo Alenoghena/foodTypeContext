@@ -28,9 +28,12 @@ const Foods = () => {
 
   return (
     <div className="foods">
+      {isClicked.componentSelected && <FoodOrder />}
+
       {!isClicked.componentSelected && (
         <div className="foods__form">
           <h2>Choose from our List of Items</h2>
+
           <form className="search">
             <label>Search:</label>
             &nbsp;
@@ -43,6 +46,13 @@ const Foods = () => {
             <FaSearch />
           </form>
         </div>
+      )}
+      {!isClicked.componentSelected && (
+        <nav className="home">
+          <Link to="/">
+            <FaLongArrowAltLeft />
+          </Link>
+        </nav>
       )}
       <ul className="ulFoods">
         {!isClicked.componentSelected &&
@@ -71,13 +81,6 @@ const Foods = () => {
             );
           })}
       </ul>
-      <nav>
-        <Link to="/" className="home">
-          <FaLongArrowAltLeft />
-        </Link>
-      </nav>
-
-      {isClicked.componentSelected && <FoodOrder />}
     </div>
   );
 };

@@ -46,6 +46,7 @@ h1 {
   font-size: 12px;
   list-style-type: none;
   grid-column: 3/4;
+  margin: 8px 0;
 }
 
 /* .sectionHeader {
@@ -67,20 +68,15 @@ h1 {
     font-size: 140%;
     list-style-type: none;
     grid-column: 3/4;
+    margin: 18px 0;
   }
   .missionStatement {
     font-size: 140%;
-    position: relative;
-    font-style: italic;
     font-weight: 600;
     justify-self: center;
     align-self: center;
-    color: #000;
-    margin: 100px 0 0 20px;
-    background-color: #306e746b;
-    border-radius: 30px;
-    grid-column: 1/2;
   }
+
   .missionStatement::first-letter {
     float: left;
     color: var(--color-primary-darker);
@@ -141,6 +137,7 @@ h1 {
     font-size: 160%;
     list-style-type: none;
     grid-column: 1/-1;
+    margin: 20px 0;
   }
   .missionStatement {
     font-size: 190%;
@@ -148,7 +145,8 @@ h1 {
     font-style: italic;
     font-weight: 600;
     color: #000;
-    margin: 100px 0 0 20px;
+    margin: 100px 20px;
+    margin-bottom: 0;
     background-color: #306e746b;
     border-radius: 30px;
     grid-column: 1/-1;

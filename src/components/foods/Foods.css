@@ -1,5 +1,5 @@
 .foods__form {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  margin: 0 0 50px 0;
+  margin: 30px 0;
   width: 200px;
   height: 20px;
   padding-bottom: 10px;
@@ -89,7 +89,7 @@
 .search svg {
   position: absolute;
   left: 8px;
-  top: 4px;
+  top: -2px;
   height: 15px;
   width: 15px;
   cursor: pointer;
@@ -97,12 +97,13 @@
 }
 
 .home svg {
-  width: 500px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
 }
 .foodImg {
   width: 110px;
   height: 110px;
+  border-radius: 1rem;
 }
 
 /*TABLETS*/
@@ -113,15 +114,15 @@
     height: 180px;
   }
   .foodName {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   .foodPrice {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
   }
-  .foods > h2 {
-    font-size: 2.5rem;
+  .foods__form > h2 {
+    font-size: 2rem;
     color: #000;
   }
   .search {
@@ -143,7 +144,7 @@
   .search svg {
     position: absolute;
     left: 12px;
-    top: 12px;
+    top: 5px;
     height: 24px;
     width: 24px;
     cursor: pointer;
@@ -151,8 +152,8 @@
   }
 
   .home svg {
-    width: 800px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -162,12 +163,18 @@
     justify-content: center;
     align-items: center;
   }
+  .liFoods {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .foodImg {
     width: 300px;
     height: 300px;
   }
-  .foods > h2 {
-    font-size: 3.2rem;
+  .foods__form > h2 {
+    font-size: 3rem;
     color: #000;
   }
 
@@ -177,17 +184,16 @@
   }
 
   .search input[type="search"] {
-    font-size: 40px;
-    width: 600px;
-    height: 60px;
+    font-size: 28px;
+    width: 550px;
+    height: 55px;
+    padding-left: 50px;
   }
-  .search input [type="search"]::placeholder {
-    font-size: 4.5rem;
-    color: #3e4555;
-  }
+
   .search svg {
     height: 40px;
     width: 40px;
+    left: 35px;
   }
 
   .home svg {
