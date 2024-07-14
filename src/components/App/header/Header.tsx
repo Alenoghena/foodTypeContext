@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-// import { AiOutlineMenu } from "react-icons/ai";
-// import { IoReorderFour } from "react-icons/io5";
-// import { AiOutlineUnorderedList } from "react-icons/ai";
+
 import {
   initialStateType,
   useStateContext,
@@ -58,6 +56,9 @@ const Header = () => {
 
 export default Header;
 
+// import { AiOutlineMenu } from "react-icons/ai";
+// import { IoReorderFour } from "react-icons/io5";
+// import { AiOutlineUnorderedList } from "react-icons/ai";
 // import { ReactNode } from "react";
 // <FaShoppingBasket /> for food
 //<FaShoppingCart />  for cart

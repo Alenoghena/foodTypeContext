@@ -3,9 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: inherit;
 }
 .nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 1.5rem;
@@ -13,10 +15,10 @@
   padding: 0 3rem;
   z-index: 100;
 }
-.nav {
+/* .nav {
   display: grid;
   grid-template-columns: 500px 300px;
-}
+} */
 .links {
   display: flex;
   flex-direction: row;
@@ -94,17 +96,16 @@
   .title {
     color: #042e35;
     font-weight: 700;
-    font-size: 300%;
+    font-size: 200%;
     line-height: 1px;
-    margin: 0 10%;
-    margin-top: 3%;
+    margin: 5% 10%;
   }
 
   .subTitle {
     color: #012329;
     font-weight: 700;
-    font-size: 200%;
-    margin-bottom: 0px;
+    font-size: 160%;
+    margin: 10px 0;
   }
   .outlineMenu {
     justify-self: left;
@@ -126,13 +127,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 500px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .title {
     color: #042e35;
     font-weight: 700;
-    font-size: 300%;
+    font-size: 1.8rem;
     line-height: 1px;
     margin: 20px 0;
   }
@@ -140,19 +147,20 @@
   .subTitle {
     color: #012329;
     font-weight: 700;
-    font-size: 250%;
+    font-size: 150%;
     margin: 10px 0;
   }
 
   .foodsLink,
   .contactsLink,
   .cartLink {
-    font-size: 0.8rem;
+    font-size: 7.2px;
   }
-  .nav .settingsbtn {
-    font-size: 0.8rem;
+  .settingsbtn {
+    font-size: 7.2px;
   }
   .outlineMenu {
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: 5px;
   }
 }

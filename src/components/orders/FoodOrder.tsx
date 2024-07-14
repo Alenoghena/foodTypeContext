@@ -45,13 +45,13 @@ const FoodOrder = () => {
     //Displays selected item
     <>
       <div className=" foodOrder">
-        {isClicked.componentSelected && (
+        {/* {isClicked.componentSelected && (
           <nav className="home">
             <Link to="/">
               <FaLongArrowAltLeft />
             </Link>
           </nav>
-        )}
+        )} */}
         {isClicked.componentSelected && (
           <ul className="ulFoodDetails">
             <li className="orderedItem">
@@ -69,8 +69,16 @@ const FoodOrder = () => {
             </li>
           </ul>
         )}
+
         {isClicked.componentSelected && (
           <ul className="ulFoodDetails">
+            {isClicked.orderSelected && (
+              <li className="shoppingCart">
+                <Link to="/cart">
+                  <FaShoppingCart />
+                </Link>
+              </li>
+            )}
             <li className="selQuantity">
               <label>Quantity:</label>
               <input
@@ -122,14 +130,6 @@ const FoodOrder = () => {
               </button>
             </li>
           </ul>
-        )}
-
-        {isClicked.orderSelected && (
-          <div className="shoppingCart">
-            <Link to="/cart">
-              <FaShoppingCart />
-            </Link>
-          </div>
         )}
       </div>
       {isClicked.componentSelected && errorMessage && (

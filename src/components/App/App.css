@@ -18,7 +18,7 @@
 }
 html {
   font-size: 100%;
-  width: 850px;
+  /* width: 850px; */
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: 8% 92%;
+  grid-template-columns: 5% 92%;
   background: #1422477c;
   color: white;
   border: #a5c1f6 solid 2px;
@@ -82,28 +82,22 @@ h4 {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
+  width: 850px;
 }
 
 /*TABLETS*/
 
 @media screen and (max-width: 768px) {
-  .App {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: white;
-    border: #a5c1f6 solid 2px;
-  }
   .footer {
-    text-align: center;
-    grid-column: 1/-1;
     font-size: 20px;
-    background-color: #102118;
+    width: 820px;
   }
   .main-content {
     grid-column: 2/-1;
   }
   .main-content-full {
-    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .footer {
     font-size: 90%;
@@ -115,7 +109,7 @@ h4 {
 @media screen and (max-width: 480px) {
   .App {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 50px 1fr;
     justify-content: center;
     align-items: center;
   }
@@ -124,9 +118,14 @@ h4 {
     grid-column: 2/-1;
   }
   .main-content-full {
-    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
   }
   .footer {
     grid-column: 1/-1;
+    font-size: 12px;
+    width: 500px;
   }
 }

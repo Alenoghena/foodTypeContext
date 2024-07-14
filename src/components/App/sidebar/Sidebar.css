@@ -1,11 +1,12 @@
 .sidebar-btn {
   margin-right: 5px;
+  margin-bottom: 20px;
 }
 
 .btnContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
 }
 .btnContainer .btnClose {
   background-color: #06472e;
@@ -24,14 +25,16 @@
 }
 
 @media screen and (max-width: 480px) {
-  .sidebar-btn {
-    font-size: 50px;
+  .btnContainer .sidebar-btn {
+    font-size: 10px;
+    margin-left: 30px;
   }
 
   .btnContainer .btnClose {
     border-radius: 50%;
     cursor: pointer;
-    font-size: 26px;
+    font-size: 20px;
     margin-top: 25px;
+    margin-left: 30px;
   }
 }

@@ -96,22 +96,28 @@
   color: #ccc;
 }
 
-.home svg {
+/* .home svg {
   width: 50px;
   height: 25px;
-}
+} */
 .foodImg {
   width: 110px;
   height: 110px;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 /*TABLETS*/
 
 @media screen and (max-width: 768px) {
+  .ulFoods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
   .foodImg {
     width: 180px;
     height: 180px;
+    cursor: pointer;
   }
   .foodName {
     font-size: 1.2rem;
@@ -169,43 +175,46 @@
     justify-content: center;
     align-items: center;
   }
+
   .foodImg {
-    width: 300px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
   }
   .foods__form > h2 {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: #000;
   }
 
   .search {
-    width: 600px;
+    width: 400px;
     height: 60px;
   }
 
   .search input[type="search"] {
-    font-size: 28px;
-    width: 550px;
-    height: 55px;
-    padding-left: 50px;
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    padding-left: 30px;
   }
 
   .search svg {
-    height: 40px;
-    width: 40px;
-    left: 35px;
+    height: 20px;
+    width: 20px;
+    left: 60px;
+    top: 16px;
   }
 
   .home svg {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 30px;
   }
   .foodName {
-    font-size: 40px;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   .foodPrice {
-    font-size: 30px;
+    font-size: 1.2rem;
     font-weight: 600;
   }
 }

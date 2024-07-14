@@ -3,7 +3,7 @@ h1 {
 }
 
 .missionStatement {
-  font-size: 100%;
+  font-size: 16px;
   position: relative;
   font-style: italic;
   padding: 5px;
@@ -12,6 +12,7 @@ h1 {
   background-color: #306e746b;
   border-radius: 30px;
   grid-column: 1/2;
+  height: 200px;
 }
 
 .liAppHeading {
@@ -22,8 +23,10 @@ h1 {
 }
 
 .liApp {
+  display: flex;
   color: #1207a9;
   font-weight: 700;
+  justify-content: center;
 }
 
 .missionStatement::first-letter {
@@ -39,14 +42,13 @@ h1 {
 }
 
 .foodApp {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
+  align-self: center;
   font-size: 12px;
   list-style-type: none;
+  padding: 10px 0;
   grid-column: 3/4;
-  margin: 8px 0;
+  margin: 18px 0;
 }
 
 /* .sectionHeader {
@@ -58,23 +60,23 @@ h1 {
 @media screen and (max-width: 768px) {
   .contentContainer {
     display: grid;
-    grid-template-columns: 40% 10% 45%;
+    grid-template-columns: 47% 48% 5%;
   }
   .foodApp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 140%;
+    justify-self: center;
+    align-self: center;
+    font-size: 120%;
     list-style-type: none;
-    grid-column: 3/4;
-    margin: 18px 0;
+    grid-column: 2/3;
+    margin: 40px 0;
   }
+
   .missionStatement {
     font-size: 140%;
     font-weight: 600;
     justify-self: center;
     align-self: center;
+    height: 320px;
   }
 
   .missionStatement::first-letter {
@@ -88,11 +90,9 @@ h1 {
     font-size: 100%;
   }
   .liAppHeading {
-    padding-bottom: 10px;
-    color: #0c0505;
     font-size: 110%;
-    font-weight: 700;
   }
+
   .outlineMenu svg {
     font-size: 30px;
   }
@@ -128,72 +128,76 @@ h1 {
   .contentContainer {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
   }
   .foodApp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 160%;
+    font-size: 100%;
     list-style-type: none;
     grid-column: 1/-1;
     margin: 20px 0;
   }
   .missionStatement {
-    font-size: 190%;
+    font-size: 1.4rem;
     position: relative;
     font-style: italic;
     font-weight: 600;
     color: #000;
-    margin: 100px 20px;
+    margin: 100px 5px;
     margin-bottom: 0;
     background-color: #306e746b;
     border-radius: 30px;
     grid-column: 1/-1;
+    width: 380px;
+    height: 220px;
   }
   .missionStatement::first-letter {
     float: left;
     color: var(--color-primary-darker);
-    font-size: 300%;
+    font-size: 3rem;
     font-weight: 700;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
   .missionStatement h3 {
-    font-size: 140%;
+    font-size: 90%;
   }
   .liAppHeading {
     padding-bottom: 10px;
     color: #0c0505;
-    font-size: 150%;
+    font-size: 1rem;
     font-weight: 700;
   }
-  .outlineMenu svg {
-    font-size: 40px;
+  .outlineMenu {
+    font-size: 12px;
   }
 
   .outlineMenuClose svg {
     font-size: 40px;
   }
-  .settingsbtn svg {
+  /* .settingsbtn svg {
     background-color: #272771;
     border-radius: 50%;
     cursor: pointer;
     padding: 0;
     height: 25px;
     width: 25px;
-  }
+  } */
 
-  .foodsLink span {
-    font-size: 150%;
+  /* .foodsLink {
+    font-size: 0.6rem;
   }
-  .contactsLink span {
-    font-size: 150%;
+  .contactsLink {
+    font-size: 0.6rem;
   }
-  .cartLink span {
-    font-size: 150%;
+  .cartLink {
+    font-size: 0.6rem;
   }
-  .settingsbtn span {
-    font-size: 150%;
+  .settingsbtn {
+    font-size: 0.6rem;
     color: #2e19ca;
-  }
+  } */
 }

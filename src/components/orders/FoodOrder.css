@@ -11,19 +11,21 @@
   justify-self: right;
   align-self: flex-start;
   margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .shoppingCart svg {
   color: #0a6767;
   height: 30px;
   width: 35px;
+  /* margin-bottom: 20px; */
 }
 .foodOrder {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
 .ulFoodDetails {
@@ -33,7 +35,7 @@
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  padding: 0;
+  padding: 20px 0;
   font-size: 12px;
   height: 25%;
 }
@@ -94,13 +96,13 @@
   display: inline-block;
   font-weight: 400;
   line-height: 1.15385;
-  margin: 0;
+  margin: 5px 0 20px 0;
   outline: none;
   padding: 8px 0.8em;
   position: relative;
   text-align: center;
   white-space: nowrap;
-  margin-top: 5%;
+  /* margin: 5px 0 0 20px; */
   border: 1px solid rgba(235, 232, 51, 0.993);
 }
 .btnOrder,
@@ -121,7 +123,9 @@
   margin-top: 5px;
   color: #121106fd;
 }
-
+.selQuantity {
+  font-size: 1rem;
+}
 .orderedItem .selFoodImg {
   width: 140px;
   height: 140px;
@@ -131,6 +135,7 @@
   height: 25px;
 }
 .home {
+  font-size: 20px;
   align-self: self-start;
 }
 
@@ -152,7 +157,7 @@
     font-weight: 700;
   }
   .selQuantity {
-    font-size: 30px;
+    font-size: 25px;
     color: #000;
   }
   .selFoodPrice {
@@ -193,80 +198,81 @@
 }
 /*MOBILES */
 @media screen and (max-width: 480px) {
+  .orderedItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .foodOrder {
     display: grid;
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  .ulFoodDetails {
-    font-size: 35px;
-    height: 100%;
-  }
 
   .selFoodDesc {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     width: 280px;
     color: #000;
     font-weight: 700;
   }
-  .selFoodImg {
-    width: 350px;
-    height: 350px;
+  .orderedItem .selFoodImg {
+    width: 150px;
+    height: 150px;
     margin-left: 10px;
   }
   .selQuantity label {
-    font-size: 40px;
+    font-size: 20px;
     color: #000;
     font-weight: 500;
   }
   input[type="text"] {
-    width: 300px;
-    height: 50px;
-    font-size: 30px;
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
   }
   input[type="number"] {
-    width: 200px;
-    height: 50px;
-    font-size: 30px;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
     margin-right: 45px;
   }
 
   input[type="text"]::placeholder {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .selFoodPrice {
     color: #000;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .btnOrder,
   .btnReturnMenu {
-    font-size: 30px;
-    width: 250px;
+    font-size: 15px;
+    width: 150px;
   }
 
+  /* .shoppingCart {
+    justify-self: center;
+    margin: 0 0 30px 50px;
+  }*/
   .shoppingCart svg {
-    color: #0d8faf;
-    height: 80px;
-    width: 100px;
-    padding-right: 5px;
-    justify-self: left;
+    height: 40px;
+    width: 60px;
+  }
+
+  .shoppingCart {
+    justify-self: right;
     align-self: flex-start;
   }
   .orderedItem h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding-bottom: 30px;
     font-weight: 600;
   }
-  /* .liMessage {
-    font-size: 3.5rem;
-  } */
-
-  /*
-  input[type="text"]::placeholder {
-    font-size: 20px;
+  .home {
+    margin: 50px 0 0 30px;
   }
-  */
 }
