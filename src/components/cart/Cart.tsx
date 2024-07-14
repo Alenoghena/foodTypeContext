@@ -26,13 +26,13 @@ const Cart = () => {
 
   const handleCartTrash = (id: number) => {
     cart.map((item: foodType) => {
-      if (item.id === id) {
-        if (itemId === null) {
-          //sets itemId to display delete icon
-          setItemId(id);
-        } else {
-          setItemId(null); //sets itemId to null to remove delete icon
-        }
+      if (item.id === id && itemId == null) {
+        //sets itemId to display delete icon
+        setItemId(id);
+        return id;
+      } else {
+        setItemId(null);
+        return null; //sets itemId to null to remove delete icon
       }
     });
   };

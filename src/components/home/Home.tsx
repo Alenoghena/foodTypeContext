@@ -1,12 +1,3 @@
-// import { ReactNode } from "react";
-// import { Link } from "react-router-dom";
-// import { AiOutlineMenu } from "react-icons/ai";
-// import {
-//   FaAddressCard,
-//   FaShoppingCart,
-//   FaShoppingBasket,
-// } from "react-icons/fa";
-// import { FiSettings } from "react-icons/fi";
 import {
   useStateContext,
   foodArrType,
@@ -15,22 +6,6 @@ import {
 import Header from "../App/header/Header";
 import "./Home.css";
 
-// type NavButtonProps = {
-//   title?: string;
-//   customFunc: () => void;
-//   icon: ReactNode;
-//   color?: string;
-//   dotColor?: string;
-// };
-
-// const NavButton = ({ customFunc, icon, color, dotColor }: NavButtonProps) => (
-//   <div>
-//     <button type="button" onClick={() => customFunc()} style={{ color }}>
-//       <span style={{ background: dotColor }}>{icon}</span>
-//     </button>
-//   </div>
-// );
-
 type HomeProps = {
   menuItems: foodArrType;
   isClicked: initialStateType;
@@ -38,28 +13,13 @@ type HomeProps = {
 };
 
 const Home = () => {
-  const { menuItems, isClicked, handleIsClicked }: HomeProps =
-    useStateContext();
-
-  // const handleActiveMenu = () => {
-  //   handleIsClicked("sidebarSelected");
-  // };
+  const { menuItems }: HomeProps = useStateContext();
 
   return (
     <div className="home">
       <section className="sectionHeader">
         <Header />
       </section>
-      {/* {!isClicked.sidebarSelected && (
-        <section className=" outlineMenu">
-          <NavButton
-            title="Menu"
-            customFunc={handleActiveMenu}
-            color="red"
-            icon={<AiOutlineMenu />}
-          />
-        </section>
-      )} */}
 
       <div>
         <section className="sectionList">
@@ -94,29 +54,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <nav className="nav">
-<section className="links">
-  {isClicked.pageSelected && (
-    <Link to="/foods" className="foodsLink">
-      {/* <FaShoppingBasket />
-      <span>Products</span>
-    </Link>
-  )}
-  <Link to="/contacts" className="contactsLink">
-    <FaAddressCard />
-    <span>Contacts</span>
-  </Link>
-
-  <Link to="/cart" className="cartLink">
-    <FaShoppingCart />
-    <span>Checkout</span>
-  </Link>
-</section>
-<section className=" settingsbtn">
-  <FiSettings />
-  <span>Settings</span>
-</section>
-</nav> */
-}
