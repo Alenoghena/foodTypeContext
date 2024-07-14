@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./FoodOrder.css";
-import { FaShoppingCart, FaLongArrowAltLeft } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import {
   useStateContext,
   foodType,
@@ -45,13 +45,6 @@ const FoodOrder = () => {
     //Displays selected item
     <>
       <div className=" foodOrder">
-        {/* {isClicked.componentSelected && (
-          <nav className="home">
-            <Link to="/">
-              <FaLongArrowAltLeft />
-            </Link>
-          </nav>
-        )} */}
         {isClicked.componentSelected && (
           <ul className="ulFoodDetails">
             <li className="orderedItem">

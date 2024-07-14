@@ -12,7 +12,6 @@ import { FaArrowLeft } from "react-icons/fa";
 
 type CartProps = {
   cart: foodArrType;
-  handleIsClicked: (clicked: string) => void;
   customermobile: number;
   isClicked: initialStateType;
   cartValue: number;
@@ -21,14 +20,8 @@ type CartProps = {
 };
 
 const Cart = () => {
-  const {
-    cart,
-    customermobile,
-    cartValue,
-    isClicked,
-    display,
-    handleDelete,
-  }: CartProps = useStateContext();
+  const { cart, customermobile, cartValue, display, handleDelete }: CartProps =
+    useStateContext();
   const [itemId, setItemId] = useState<number | null>(null);
 
   const handleCartTrash = (id: number) => {
@@ -43,7 +36,6 @@ const Cart = () => {
       }
     });
   };
-  // console.log(display, cart.length);
 
   return (
     <div className="cart">
