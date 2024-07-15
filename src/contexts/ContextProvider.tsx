@@ -1,3 +1,4 @@
+import { error } from "console";
 import React, {
   createContext,
   useContext,
@@ -237,8 +238,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
           (cartItem: foodType) => cartItem.id === id
         );
 
-        if (Number(orderQuantity) > itemQuantity) throw Error();
-
+        if (Number(orderQuantity) > itemQuantity) throw new Error();
         if (item.id === id) {
           if (isCartSame) {
             cartList = cart.map((cartItem: foodType) => {
@@ -289,9 +289,9 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       });
 
       setMenuItems(updatedMenuItems);
-      cart.length === 0 ? setDisplay(false) : setDisplay(true);
-    } catch {
+    } catch (err) {
       setErrorMessage(true);
+      throw err;
     }
   };
 

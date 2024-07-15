@@ -40,6 +40,7 @@ const FoodOrder = () => {
     isClicked,
     errorMessage,
   }: FoodOrderType = useStateContext();
+  console.log(errorMessage);
 
   return (
     //Displays selected item

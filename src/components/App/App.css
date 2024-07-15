@@ -14,10 +14,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 html {
   font-size: 100%;
+  box-sizing: border-box;
+  /* width: 850px; */
 }
 
 body {
@@ -30,12 +32,13 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: 5% 92%;
+  grid-template-columns: 5% 95%;
   background: #1422477c;
   color: white;
   border: #a5c1f6 solid 2px;
+  width: inherit;
   /* transform: translate(-50%, 0%); */
-  background-image: url(../../img/mediumField.jpg);
+  /* background-image: url(../../img/mediumField.jpg); */
 }
 
 .sidebar {
@@ -81,7 +84,6 @@ h4 {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
 }
 
 /*TABLETS*/
@@ -89,7 +91,7 @@ h4 {
 @media screen and (max-width: 768px) {
   .footer {
     font-size: 20px;
-    width: 820px;
+    /* width: 820px; */
   }
   .main-content {
     grid-column: 2/-1;
