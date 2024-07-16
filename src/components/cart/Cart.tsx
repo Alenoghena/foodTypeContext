@@ -89,9 +89,8 @@ const Cart = () => {
             </li> */}
             <li className="liMessage">
               <label>
-                Order Submitted! You will receive an SMS,once ready, on your
-                mobile,
-                {customermobile}, for pickup.
+                Order Submitted! You will receive an SMS, once ready, on your
+                mobile, {customermobile}, for pickup.
               </label>
 
               <h3>
