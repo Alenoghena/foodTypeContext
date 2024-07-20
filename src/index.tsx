@@ -1,21 +1,19 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./components/App/App";
 import { ContextProvider } from "./contexts/ContextProvider";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
   <React.StrictMode>
     <ContextProvider>
-      <BrowserRouter>
+      <Router>
         <App />
-      </BrowserRouter>
+      </Router>
     </ContextProvider>
   </React.StrictMode>
 );

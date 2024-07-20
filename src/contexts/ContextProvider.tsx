@@ -1,4 +1,3 @@
-import { error } from "console";
 import React, {
   createContext,
   useContext,
@@ -238,7 +237,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
           (cartItem: foodType) => cartItem.id === id
         );
 
-        if (Number(orderQuantity) > itemQuantity) throw new Error();
+        if (Number(orderQuantity) > itemQuantity)
+          throw new Error(
+            "Quantity above stock. Please check available stock and enter the right value!"
+          );
         if (item.id === id) {
           if (isCartSame) {
             cartList = cart.map((cartItem: foodType) => {

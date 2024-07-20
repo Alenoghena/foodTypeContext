@@ -14,6 +14,7 @@
   width: 100%;
   padding: 0 3rem;
   z-index: 100;
+  background-color: #042e35;
 }
 /* .nav {
   display: grid;
@@ -53,13 +54,30 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 0.6rem;
+  color: #fff;
   margin: 5px 10px;
 }
+
+.foodsLink:hover,
+.contactsLink:hover,
+.cartLink:hover,
+.settingsbtn:hover {
+  color: #f0f;
+}
 .settingsbtn span {
-  color: #222245;
+  color: #fff;
+}
+.foodsLink:active,
+.contactsLink:active,
+.cartLink:active,
+.settingsbtn:active {
+  color: #718a8a;
+}
+.settingsbtn span {
+  color: #fff;
 }
 
-.contactsLink svg,
+/* .contactsLink svg,
 .foodsLink svg,
 .cartLink svg,
 .settingsbtn svg {
@@ -68,16 +86,16 @@
   width: 15px;
   padding: 20px 0;
   cursor: pointer;
-}
+} */
 
-.settingsbtn {
+/* .settingsbtn {
   color: darkgrey;
-}
-.settingsbtn svg {
+} */
+/* .settingsbtn svg {
   background-color: #272771;
   border-radius: 50%;
   padding: 0;
-}
+} */
 
 .outlineMenu {
   color: red;
