@@ -1,6 +1,6 @@
 .contentContainer {
   display: grid;
-  grid-template-columns: 47.5% 5% 47.5%;
+  grid-template-columns: 42% 8% 50%;
 }
 
 h1 {
@@ -32,13 +32,13 @@ h1 {
 }
 .storageContainer {
   display: grid;
-  grid-template-columns: 20px 1fr 2px 1fr;
+  grid-template-columns: 3% 35% 2% 55%;
   justify-content: right;
   align-items: center;
 }
 
 .farmContent {
-  font-size: 1rem;
+  font-size: 1.1rem;
   grid-column: 4/5;
   grid-row: 2/3;
 }
@@ -50,7 +50,7 @@ h1 {
   grid-row: 1/2;
 }
 .storageContent {
-  font-size: 1rem;
+  font-size: 1.1rem;
   grid-column: 2/3;
   grid-row: 1/2;
 }

@@ -42,6 +42,7 @@ const Foods = () => {
               value={searchTerm}
               placeholder="Search for item"
               onChange={(e) => setSearchTerm(e.target.value)}
+              className="searchInput"
             />
             <FaSearch />
           </form>
