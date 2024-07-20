@@ -3,7 +3,6 @@ import {
   foodArrType,
   initialStateType,
 } from "../../contexts/ContextProvider";
-import Header from "../App/header/Header";
 import "./Home.css";
 
 type HomeProps = {
@@ -17,8 +16,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Header />
-
       <div>
         <section className="sectionList">
           <div className="contentContainer">
@@ -49,26 +46,26 @@ const Home = () => {
       </div>
       <div className="farm">
         <div className="farmContainer">
-          <div>
-            These products are cultivated organically without chemicals from the
-            finest breed
+          <div className="storageContent">
+            Storage of our products receives a high level of care and
+            monitoring; ensuring the best temperature, pressure and humidity
+            conditions are maintained for clean and healthy products
           </div>
           <img
             src={require("../../img/mediumField2.jpg")}
             alt="farm"
-            style={{ height: 150, width: 160 }}
+            className="farmImg"
           />
         </div>
         <div className="storageContainer">
           <img
             src={require("../../img/mediumGrainBin.jpg")}
             alt="farm"
-            style={{ height: 150, width: 160 }}
+            className="storageImg"
           />
-          <div>
-            Storage of our products receives a high level of care and
-            monitoring; ensuring the best temperature, pressure and humidity
-            conditions are maintained for clean and healthy products
+          <div className="farmContent">
+            These products are cultivated organically without chemicals from the
+            finest breed
           </div>
         </div>
       </div>

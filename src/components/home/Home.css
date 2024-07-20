@@ -1,9 +1,14 @@
+.contentContainer {
+  display: grid;
+  grid-template-columns: 47.5% 5% 47.5%;
+}
+
 h1 {
   font-size: 20px;
 }
 
 .missionStatement {
-  font-size: 16px;
+  font-size: 20px;
   position: relative;
   font-style: italic;
   padding: 5px;
@@ -11,38 +16,54 @@ h1 {
   margin: 10px 0 0 20px;
   background-color: #306e746b;
   border-radius: 30px;
+  grid-row: 1/3;
   grid-column: 1/2;
   height: 200px;
 }
 .farm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-size: 12px;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 30px;
 }
 .farmContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20px 1fr 4px 1fr;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 400px;
 }
 .storageContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 20px 1fr 2px 1fr;
+  justify-content: right;
   align-items: center;
-  gap: 20px;
-  width: 400px;
+}
+
+.farmContent {
+  font-size: 1rem;
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+.farmImg {
+  height: 200px;
+  width: 250px;
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.storageContent {
+  font-size: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.storageImg {
+  height: 200px;
+  width: 250px;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 .liAppHeading {
   padding-bottom: 10px;
   color: #0c0505;
-  font-size: 15px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -50,6 +71,7 @@ h1 {
   display: flex;
   color: #1207a9;
   font-weight: 700;
+  font-size: 0.9rem;
   justify-content: center;
 }
 
@@ -58,11 +80,6 @@ h1 {
   color: var(--color-primary-darker);
   font-size: 2.5em;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.contentContainer {
-  display: grid;
-  grid-template-columns: 30% 10% 50%;
 }
 
 .foodApp {

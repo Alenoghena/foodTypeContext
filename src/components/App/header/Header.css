@@ -10,16 +10,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 1.5rem;
+  height: 2rem;
   width: 100%;
   padding: 0 3rem;
   z-index: 100;
   background-color: #042e35;
 }
-/* .nav {
-  display: grid;
-  grid-template-columns: 500px 300px;
-} */
 .links {
   display: flex;
   flex-direction: row;
@@ -50,10 +46,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: #fff; */
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #fff;
   margin: 5px 10px;
 }
@@ -99,7 +94,7 @@
 
 .outlineMenu {
   color: red;
-  font-size: 10px;
+  font-size: 16px;
   margin-left: 10px;
   justify-self: left;
   align-self: self-start;

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Error from "./error/Error";
 import Footer from "./Footer";
 import Home from "../home/Home";
+import Header from "./header/Header";
 import "./App.css";
 import Contacts from "./contacts/Contacts";
 import Sidebar from "./sidebar/Sidebar";
@@ -26,6 +27,9 @@ const App = () => {
 
   return (
     <main className="App">
+      <header className="App__header">
+        <Header />
+      </header>
       {isClicked.sidebarSelected && (
         <section className="sidebarContainer">
           <Sidebar />
